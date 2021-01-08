@@ -1,22 +1,40 @@
-let cells = 1;
+let cells = 0
+let clicked = false
+//creates table cells with event listeners, used
+//for changing colors w/ click or click and hover
+const responsiveCell = () => {
+  let cell = document.createElement("td")
+  cell.addEventListener("mousedown", () => {
+    clicked = true
+    cell.style.backgroundColor = document.getElementById("colors").value
+  })
+  cell.addEventListener("mouseover", () => {
+    if (clicked === true) {
+      cell.style.backgroundColor = document.getElementById("colors").value
+    }
+  })
+  cell.addEventListener("mouseup", () => {
+    clicked = false
+  })
+  return cell
+}
 //code for adding columns to grid
 const addCol = () => {
   let grid = document.getElementById("table")
   let rows = grid.getElementsByTagName("tr")
   for (let i = 0; i < rows.length; i++) {
-    let cell = document.createElement("td")
-    rows[i].appendChild(cell)
+    rows[i].appendChild(responsiveCell())
   }
   cells++
 }
 //code for adding rows to grid
 const addRow = () =>  {
   let grid = document.getElementById("table")
-  let newRow = grid.insertRow(0)
+  let newRow = document.createElement("tr")
   for (let i = 0; i < cells; i++) {
-    let cell = document.createElement("td")
-    newRow.appendChild(cell)
+    newRow.appendChild(responsiveCell())
   }
+  grid.appendChild(newRow)
 }
 //code for removing columns from grid
 const removeCol = () =>  {
