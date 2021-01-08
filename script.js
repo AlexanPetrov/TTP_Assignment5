@@ -9,7 +9,7 @@ const addCol = () => {
   }
   cells++
 }
-
+//code for adding rows to grid
 const addRow = () =>  {
   let grid = document.getElementById("table")
   let newRow = grid.insertRow(0)
@@ -17,4 +17,15 @@ const addRow = () =>  {
     let cell = document.createElement("td")
     newRow.appendChild(cell)
   }
+}
+//code for removing columns from grid
+const removeCol = () =>  {
+  let grid = document.getElementById("table")
+  let rows = grid.getElementsByTagName("tr")
+  for (let i = rows.length - 1; i >= 0; i--) {
+    let cellList = rows[i].getElementsByTagName("td")
+    let cellToRemove = cellList[cellList.length - 1]
+    rows[i].removeChild(cellToRemove)
+  }
+  cells--
 }
