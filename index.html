@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Assignment5</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src = "script.js"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <button id ="Add Column" onclick="addCol()">Add Column</button>
+            <button id="Remove Column" onclick="removeCol()">Remove Column</button>
+            <button id="Add Row" onclick="addRow()">Add Row</button>
+            <button id="Remove Row" onclick="removeRow()">Remove Row</button>
+            <button id="Fill All">Fill All</button>
+            <button id="Fill All Uncolored">Fill All Uncolored</button>
+            <button id="Clear All">Clear All</button>
+            <label for="colors">Pick a color:</label>
+            <select name="colors" id="colors">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="purple">Purple</option>
+            </select>
+            <table id = "table">
+                    <tr>
+                        <td></td>
+                    </tr>
+              </table>
+        </div>
+    </body>
+</html>
