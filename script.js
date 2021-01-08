@@ -9,3 +9,12 @@ const addCol = () => {
   }
   cells++
 }
+
+const addRow = () =>  {
+  let grid = document.getElementById("table")
+  let newRow = grid.insertRow(0)
+  for (let i = 0; i < cells; i++) {
+    let cell = document.createElement("td")
+    newRow.appendChild(cell)
+  }
+}
