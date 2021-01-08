@@ -29,3 +29,9 @@ const removeCol = () =>  {
   }
   cells--
 }
+//code for removing rows from grid
+const removeRow = () =>  {
+  let grid = document.getElementById("table")
+  let numbRows = grid.getElementsByTagName("tr").length
+  grid.deleteRow(numbRows - 1)
+}
