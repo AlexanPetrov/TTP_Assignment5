@@ -63,3 +63,14 @@ const fillAll = (color) => {
     }
   }
 }
+//code for filling uncolored cells
+const fillUncolored = (color) => {
+  for (let i = 0; i < rows.length; i++) {
+    const columns = rows[i].getElementsByTagName("td")
+    for (let j = 0; j < columns.length; i++) {
+      if (columns[i].style.backgroundColor === ""){
+        columns[i].style.backgroundColor = color
+      }
+    }
+  }
+}
