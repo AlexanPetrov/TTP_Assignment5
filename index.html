@@ -14,8 +14,8 @@
             <button id="Remove Column" onclick="removeCol()">Remove Column</button>
             <button id="Add Row" onclick="addRow()">Add Row</button>
             <button id="Remove Row" onclick="removeRow()">Remove Row</button>
-            <button id="Fill All">Fill All</button>
-            <button id="Fill All Uncolored">Fill All Uncolored</button>
+            <button id="Fill All" onclick = "fillAll(document.getElementById('colors').value)">Fill All</button>
+            <button id="Fill All Uncolored" onclick = "fillUncolored(document.getElementById('colors').value)">Fill All Uncolored</button>
             <button id="Clear All">Clear All</button>
             <label for="colors">Pick a color:</label>
             <select name="colors" id="colors">
