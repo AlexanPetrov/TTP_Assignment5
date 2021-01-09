@@ -53,3 +53,13 @@ const removeRow = () =>  {
   let numbRows = grid.getElementsByTagName("tr").length
   grid.deleteRow(numbRows - 1)
 }
+//code for filling all cells with color
+const fillAll = (color) => {
+  const rows = document.getElementById("table").getElementsByTagName("tr")
+  for (let i = 0; i < rows.length; i++) {
+    const columns = rows[i].getElementsByTagName("td")
+    for (let j = 0; j < columns.length; i++) {
+      columns[i].style.backgroundColor = color
+    }
+  }
+}
