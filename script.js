@@ -59,7 +59,7 @@ const fillAll = (color) => {
   for (let i = 0; i < rows.length; i++) {
     const columns = rows[i].getElementsByTagName("td")
     for (let j = 0; j < columns.length; j++) {
-      columns[i].style.backgroundColor = color
+      columns[j].style.backgroundColor = color
     }
   }
 }
@@ -68,8 +68,8 @@ const fillUncolored = (color) => {
   for (let i = 0; i < rows.length; i++) {
     const columns = rows[i].getElementsByTagName("td")
     for (let j = 0; j < columns.length; j++) {
-      if (columns[i].style.backgroundColor === ""){
-        columns[i].style.backgroundColor = color
+      if (columns[j].style.backgroundColor === ""){
+        columns[j].style.backgroundColor = color
       }
     }
   }
