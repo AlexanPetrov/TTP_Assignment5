@@ -74,3 +74,8 @@ const fillUncolored = (color) => {
     }
   }
 }
+//code to clear color from cells
+//use same code as fillAll, but pass no color instead
+const removeAllColor = () => {
+  fillAll("")
+}
