@@ -58,7 +58,7 @@ const fillAll = (color) => {
   const rows = document.getElementById("table").getElementsByTagName("tr")
   for (let i = 0; i < rows.length; i++) {
     const columns = rows[i].getElementsByTagName("td")
-    for (let j = 0; j < columns.length; i++) {
+    for (let j = 0; j < columns.length; j++) {
       columns[i].style.backgroundColor = color
     }
   }
@@ -67,7 +67,7 @@ const fillAll = (color) => {
 const fillUncolored = (color) => {
   for (let i = 0; i < rows.length; i++) {
     const columns = rows[i].getElementsByTagName("td")
-    for (let j = 0; j < columns.length; i++) {
+    for (let j = 0; j < columns.length; j++) {
       if (columns[i].style.backgroundColor === ""){
         columns[i].style.backgroundColor = color
       }
